@@ -1,7 +1,7 @@
 ---
 title: "The Math of Music"
 author: "Eric Mickelsen"
-created: "Tue Nov 28 2017 00:26:28 GMT-0800 (Pacific Standard Time)"
+created: "Thu Nov 30 2017 22:49:48 GMT-0800 (Pacific Standard Time)"
 original:
     title: "The Math of Music"
     url: "http://localhost:3000/tonality.html"
@@ -80,11 +80,7 @@ Intuitively, you can think of these functions as describing the x or y coordinat
 
 $$X_{t} = A\sin{(2\pi f t + \varphi)}$$
 
-The frequency $f$ is cycles per second, so we need to multiply by $2\pi$ to convert to radians, which is what $\sin$ expects ($1\text{cycle}=2\pi \text{radians}$). $A$ is the **amplitude** of the wave and $\varphi$ is known as the **phase**. Note, we could just as easily have put velocity $v$ or force $F$ on the left side of that equation, or used $\cos$ or added a minus sign on the right side. These are all equivalent.
-
-Amplitude is the magnitude or loudness of the sound.
-
-The phase variable $\varphi$ lets us translate the function along the x axis (time), to account for the starting time and starting state of the wave. Each of the sinusoidal functions we just discussed as derivatives of each other above are also just translations of one another along the x axis. Phase is generally thought to be musically unimportant and nearly impossible to hear, except in cases where similar sound waves with different phases interfere with each other.
+The frequency $f$ is cycles per second, so we need to multiply by $2\pi$ to convert to radians, which is what $\sin$ expects ($1\text{cycle}=2\pi \text{radians}$). $A$ is the **amplitude** or loudness of the wave and $\varphi$ is known as the **phase**. Note, we could just as easily have put velocity $v$ or force $F$ on the left side of that equation, or used $\cos$ or added a minus sign on the right side. These are all equivalent.
 
 ```javascript; hidden
 let sine = [], cosine = [], negsine = [], negcosine = [];
@@ -116,6 +112,8 @@ nv.addGraph(function() {
 
 return data;
 ```
+
+The phase variable $\varphi$ lets us translate the function along the x axis (time), to account for the starting time and starting state of the wave. Each of the sinusoidal functions we just discussed as derivatives of each other above are also just translations of one another along the x axis. Phase is generally thought to be musically unimportant and nearly impossible to hear, except in cases where similar sound waves with different phases interfere with each other.
 
 ...
 
